@@ -200,33 +200,6 @@ The typical execution flow is:
 
 ---
 
-## 📸 Visual Demonstration
-
-> *(Add screenshots inside the `docs/images/` folder and update the links below.)*
-
-### Visual Acquisition Layer
-
-```text
-docs/images/01-scrcpy-window.png
-```
-
-### OCR Extraction Pipeline
-
-```text
-docs/images/02-ocr-output.png
-```
-
-### Structured Knowledge Generation
-
-```text
-docs/images/03-question-bank.png
-```
-
-### System Architecture
-
-```text
-docs/images/04-system-overview.png
-```
 
 ---
 
