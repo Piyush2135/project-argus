@@ -7,7 +7,6 @@ from datetime import datetime
 QUESTION_FILE = "latest_question.txt"
 DATABASE_FILE = "question_bank.json"
 
-# Load existing database
 if os.path.exists(DATABASE_FILE):
     with open(DATABASE_FILE, "r", encoding="utf-8") as f:
         database = json.load(f)
@@ -32,7 +31,6 @@ while True:
             time.sleep(0.5)
             continue
 
-        # Create a unique hash for duplicate detection
         qid = hashlib.md5(
             question.encode("utf-8")
         ).hexdigest()
@@ -41,7 +39,7 @@ while True:
             time.sleep(0.5)
             continue
 
-        # New question detected
+      
         seen_ids.add(qid)
 
         record = {
@@ -52,7 +50,7 @@ while True:
 
         database.append(record)
 
-        # Save database
+      
         with open(DATABASE_FILE, "w", encoding="utf-8") as f:
             json.dump(
                 database,
