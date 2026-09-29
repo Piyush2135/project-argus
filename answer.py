@@ -6,7 +6,7 @@ import warnings
 
 from ollama_client import ask_ollama
 
-# ---------------- SETTINGS ----------------
+
 
 IMAGE_FILE = "capture.png"
 CROP_FILE = "quiz_crop.png"
@@ -21,7 +21,7 @@ BOTTOM = 0.86
 
 CHECK_INTERVAL = 0.10
 
-# ------------------------------------------
+
 
 warnings.filterwarnings("ignore")
 
@@ -133,13 +133,13 @@ while True:
         ) as f:
             f.write(final_text)
 
-        # Ask Ollama immediately
+       
         try:
             ai_answer = ask_ollama(final_text)
         except Exception as e:
             ai_answer = f"Ollama Error: {e}"
 
-        # Save AI output
+       
         with open(
             ANSWER_FILE,
             "w",
